@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="me.kimyongwoo.springbootdeveloper.controller.TokenApiControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-10-01T05:28:50" hostname="DESKTOP-U71I8HN" time="0.946">
+  <properties/>
+  <testcase name="createNewAccessToken: 새로운 액세스 토큰을 발급한다." classname="me.kimyongwoo.springbootdeveloper.controller.TokenApiControllerTest" time="0.186"/>
+  <testcase name="deleteRefreshToken: 리프레시 토큰을 삭제한다." classname="me.kimyongwoo.springbootdeveloper.controller.TokenApiControllerTest" time="0.736"/>
+  <system-out><![CDATA[2024-10-01T14:28:49.967+09:00  INFO 2284 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [me.kimyongwoo.springbootdeveloper.controller.TokenApiControllerTest]: TokenApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-01T14:28:49.988+09:00  INFO 2284 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration me.kimyongwoo.springbootdeveloper.SpringbootDeveloperApplication for test class me.kimyongwoo.springbootdeveloper.controller.TokenApiControllerTest
+2024-10-01T14:28:50.019+09:00  INFO 2284 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T14:28:50.019+09:00  INFO 2284 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T14:28:50.025+09:00  INFO 2284 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        refresh_token
+        (refresh_token, user_id, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        rt1_0.id,
+        rt1_0.refresh_token,
+        rt1_0.user_id 
+    from
+        refresh_token rt1_0 
+    where
+        rt1_0.refresh_token=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2024-10-01T14:28:50.252+09:00  INFO 2284 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-10-01T14:28:50.259+09:00  INFO 2284 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-10-01T14:28:50.294+09:00  INFO 2284 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 32 ms
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.nickname,
+        u1_0.password 
+    from
+        users u1_0
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        refresh_token
+        (refresh_token, user_id, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        rt1_0.id,
+        rt1_0.refresh_token,
+        rt1_0.user_id 
+    from
+        refresh_token rt1_0 
+    where
+        rt1_0.user_id=?
+Hibernate: 
+    delete 
+    from
+        refresh_token 
+    where
+        id=?
+Hibernate: 
+    select
+        rt1_0.id,
+        rt1_0.refresh_token,
+        rt1_0.user_id 
+    from
+        refresh_token rt1_0 
+    where
+        rt1_0.refresh_token=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
